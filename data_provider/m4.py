@@ -99,7 +99,7 @@ class M4Dataset:
         def parser(x):
                 return datetime.strptime(x, "%Y-%m-%dT%H:%M+10:00")
 		
-        series_or = read_csv('./dataset/m4/aemo_2018.csv', header=0, parse_dates=[0], sep=",", index_col=0, date_parser=parser)
+        series_or = read_csv('/home/CIN/fhal/rep3/dataset/m4/', header=0, parse_dates=[0], sep=",", index_col=0, date_parser=parser)
         grupo_usi=['GUNNING1','GULLRWF1','CAPTL_WF','TARALGA1','CULLRGWF','WOODLWN1']
         t_ini_tr=datetime.strptime("02/01/2018 00:00", "%d/%m/%Y %H:%M")
         t_fim_tr=datetime.strptime("30/08/2018 00:00", "%d/%m/%Y %H:%M")
